@@ -5,7 +5,7 @@ import { FaCaretRight } from 'react-icons/fa'
 const Signup = () => {
 return(
     <div className="subscribe_box-signup">
-<img src={loginLogo} alt="" />
+<img className='login-logo' src={loginLogo} alt="" />
 <div className="signup-box">
 <div className="signup-registr-box">
     <h1 className='introduction-signup'>Create account</h1>

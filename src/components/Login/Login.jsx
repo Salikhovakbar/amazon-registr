@@ -2,28 +2,29 @@ import './Login.css'
 import loginLogo from '../../assets/image/login_logo.png'
 import { AiFillCaretDown} from 'react-icons/ai'
 import { GrClose } from 'react-icons/gr'
+import { useState } from 'react'
 const Login = () => {
   const boxStyleSignin =  {
 width: "33%",
 height: '0',
 border: '0.5px solid gray'
   }
+  const [boxLogin, setBoxLogin] = useState(false)
   const mouseOverBtnSignin = () => {
-    if(document.querySelector(".explaining-box-signin").style.display === 'none'){
-      document.querySelector(".explaining-box-signin").style.display = 'block'
-    }
-    else{
-      document.querySelector(".explaining-box-signin").style.display = 'none'
-    }
+    setBoxLogin(!boxLogin)
   }
   const deleteBtnSignin = () => {
-    if(document.querySelector(".explaining-box-signin").style.display ==='block'){
-      document.querySelector(".explaining-box-signin").style.display = 'none'
-    }
+if(document.querySelector('.explaining-box-signin').style.display === 'block'){
+  document.querySelector('.explaining-box-signin').style.display = 'none'
+}
+else{
+  document.querySelector('.explaining-box-signin').style.display = 'block'
+
+}
   }
 return(
     <div className="subscribe_box-signin">
-    <img src={loginLogo} alt="" />
+    <img className='login-logo' src={loginLogo} alt="" />
     <div className="login-box">
       <div className="login-box-registr">
 <h1 className='introduction-signin'>Sign in</h1>
@@ -40,7 +41,7 @@ return(
   </div>
   <button className='btn-signin'>Sign in</button>
 </form>
-<div style={{display: "none"}} className="explaining-box-signin">
+<div style={boxLogin ? {display: "block"} : {display: "none"}   } className="explaining-box-signin">
     <div className="main-text-box-signin"><h3>"Keep Me Signed In" Checkbox</h3> <GrClose onClick={deleteBtnSignin} className='close-btn-signin'/> </div>
    <p>Choosing "Keep me signed in" reduces the number of times <br /> you're asked to Sign-In on this device.</p>
    <p>To keep your account secure, use this option only on your <br /> personal devices.</p>

@@ -2,12 +2,17 @@
     display: flex;
     height: 120vh;
 align-items: center;
-justify-content: center;
 flex-direction: column;
+}
+.login-logo{
+    background-position: -5px -130px;
+    max-height: 30%;
+    max-width: 30%;
+    object-fit: cover;
 }
 .login-box{
     height: auto;
-    min-width: 40%;
+    max-width: 33%;
     border-radius: 5px;
     border: 1px solid gray;
 }
@@ -144,8 +149,17 @@ transform: scale(1.1);
 .box-preference-signin{
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
     color: rgb(119, 119, 119);
     margin-top: 40px;
+}
+.box-preference-signin > span{
+    min-width: 33%;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
 }
 .create-account-signin{
     padding: 10px 0;
