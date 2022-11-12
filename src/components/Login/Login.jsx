@@ -3,6 +3,7 @@ import loginLogo from '../../assets/image/login_logo.png'
 import { AiFillCaretDown} from 'react-icons/ai'
 import { GrClose } from 'react-icons/gr'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 const Login = () => {
   const boxStyleSignin =  {
 width: "33%",
@@ -35,7 +36,7 @@ return(
   </div>
   <div className="password-input-box">
     <div className="password-box">
-  <label  htmlFor="password-input">Password</label> <span>Forgot your password?</span>
+  <label  htmlFor="password-input">Password</label> <Link to='/password-forgot' className='page-recreate-password'>Forgot your password?</Link>
   </div>
   <input required className='password-input' id='password-input' type="password" name=""  />
   </div>
@@ -54,7 +55,9 @@ return(
 <div className="box-preference-signin">
   <div style={boxStyleSignin}></div><span>New to Amazon?</span><div style={boxStyleSignin}></div>
 </div>
-<button  className='create-account-signin'>Create your Amazon account</button>
+<div className="btn-create-box">
+<Link to='/signup'  className='create-account-signin'>Create your Amazon account</Link>
+      </div>
       </div>
     </div>
     </div>

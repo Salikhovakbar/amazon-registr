@@ -84,6 +84,7 @@
 }
 .signin-link-account{
     color: dodgerblue;
+    text-decoration: none;
     display: flex;
     align-items: center;
 }

@@ -1,4 +1,4 @@
-import './Password-recreate.css'
+import './ReacreatePassword.css'
 import logo from '../../assets/image/login_logo.png'
 
 const ReacreatePassword = () => {

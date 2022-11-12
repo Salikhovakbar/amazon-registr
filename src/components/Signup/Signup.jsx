@@ -2,6 +2,7 @@ import './Signup.css'
 import loginLogo from '../../assets/image/login_logo.png'
 import {Si1Password} from 'react-icons/si'
 import { FaCaretRight } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 const Signup = () => {
 return(
     <div className="subscribe_box-signup">
@@ -33,7 +34,7 @@ return(
     </form>
     <p className='signup-conditions-text'>By continuing, you agree to Amazon's <span className='condition-text-signup-link'> Conditions of Use </span> and <span className='condition-text-signup-link'> Privacy Notice </span>. </p>
 <div className="moreinfo-box-signup">
-    <p>Already have an account?</p> <span className='signin-link-account'>Sign in <FaCaretRight/> </span>
+    <p>Already have an account?</p> <Link to='/signin' className='signin-link-account'>Sign in <FaCaretRight/> </Link>
 </div>
 </div>
 </div>
